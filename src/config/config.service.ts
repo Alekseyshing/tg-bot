@@ -15,8 +15,12 @@ export class ConfigService implements IConfigService {
   }
 
   get(key: string): string {
+    console.log(key);
+
     const res = this.config[key];
     if (!res) {
+      console.log(key);
+
       throw new Error("Нет такого ключа")
     }
     return res
